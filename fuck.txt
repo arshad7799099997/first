@@ -2,3 +2,4 @@ hai how are u com efuck
 done
 checking ansible playbook
 added key for authenticatipn
+host key verification accepted
