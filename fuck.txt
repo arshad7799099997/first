@@ -3,3 +3,4 @@ done
 checking ansible playbook
 added key for authenticatipn
 host key verification accepted
+fixed workspace path
