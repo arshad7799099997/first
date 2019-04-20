@@ -7,4 +7,4 @@
       state: installed
   - name: start the telnet service
     service: name=telnet service=started
-  - command: top
+  - command: cat /etc/ansible/hosts
