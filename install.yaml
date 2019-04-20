@@ -2,6 +2,8 @@
   sudo: yes
   tasks: 
   - name: install telnet package
-    apt-get: name=telnet state=installed
-    - name: start the telnet service
-      service: name=telnet service=started
+    package: 
+      name: telnet 
+      state: installed
+  - name: start the telnet service
+    service: name=telnet service=started
