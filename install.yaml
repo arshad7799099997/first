@@ -1,0 +1,10 @@
+- hosts: localhost
+  sudo: yes
+  tasks: 
+  - name: install telnet package
+    package: 
+      name: telnet 
+      state: installed
+  - name: start the telnet service
+    service: name=telnet service=started
+  - command: cat /etc/ansible/hosts
