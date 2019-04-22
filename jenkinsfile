@@ -1,0 +1,26 @@
+def workspace;
+node
+{
+    stage('checkout')
+    {
+     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'eb351f94-5f94-4622-a566-2590e4b9fa34', url: 'https://github.com/arshad7799099997/first.git']]])
+     workspace=pwd()
+    }
+    stage('static code analysis')
+    {
+        echo"static code analysis"
+    }
+    stage('Build')
+    {
+     echo"Build the code"   
+    }
+    stage('Unit testing')
+    {
+     echo"unit testing"   
+    }
+    stage('Delivery')
+    {
+        echo"deliver the code"
+    }
+    }
+    
